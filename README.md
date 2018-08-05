@@ -6,7 +6,7 @@ Even with a Java course fresh in mind, it can be tough to bootstrap a Java proje
 
 ## Lessons
 
- 1. Basics
+ 1. Basics (*[lesson 1 handout](lesson-01-basics/doc/handout.pdf)*)
     * How to create a Java project manually with just the JDK on board?
     * How to setup a simple Eclipse project?
     * Create the source, compile it and create a runnable JAR with most basic tooling - just the JDK.
