@@ -1,4 +1,4 @@
-\documentclass[10pt,landscape]{article}
+\documentclass[10pt,landscape,a4paper]{article}
 \usepackage[landscape]{geometry}
 \usepackage{multicol}
 \usepackage{ifthen}
@@ -8,8 +8,11 @@
 \usepackage{color}
 \lstset{numbers=left, xleftmargin=0.5cm, xrightmargin=0.5cm}
 
+% Template is based on work of 2014 Winston Chang
+% see: https://github.com/wch/latexsheet
+
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-	{ \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+	{ \geometry{top=.5in,left=.4in,right=.4in,bottom=.5in} }
 	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
@@ -47,10 +50,7 @@
 \footnotesize
 \begin{multicols}{2}
 
-
 % multicol parameters
-% These lengths are set only within the two main columns
-%\setlength{\columnseprule}{0.25pt}
 \setlength{\premulticols}{1pt}
 \setlength{\postmulticols}{1pt}
 \setlength{\multicolsep}{3pt}
@@ -76,7 +76,7 @@ Java programs are compiled to byte code which requires the Java Virtual machine 
 \verb!*.jar! & A Java archive file, basically a zip-archive. \\
 \verb!MANIFEST.mf!  & Describes dependencies and main class.  \\
 \end{tabular}\\
-Java programs are packaged into JAR files which contain the  compiled byte code and required resources and a description in META-INF/MANIFEST.mf. The manifest file describes the dependencies and the main entry point to launch the program.
+Java classes are packaged into JAR files which also contain a description in META-INF/MANIFEST.mf. The manifest describes the dependencies and the main entry point to launch the program.
 
 \section{A First Example}
 \subsection{Steps to writing the program: \texttt{HelloDuke.java}}
@@ -114,7 +114,7 @@ Java programs are not distributed by class files, instead archives are used wher
 
 \subsection{Creating a runnable JAR}
 
-As JAR files may contain many classes, the JVM requires an information about which class to launch. This JAR file does not yet contain this information, so any attempt to execute the JAR will result in an error.
+As the JVM requires an information about which class to launch, executing this JAR file will result in an error.
 \begin{lstlisting}[language=bash,frame=single]
 > java -jar HelloDuke.jar
 kein Hauptmanifestattribut, in Hello.jar
@@ -173,24 +173,24 @@ With the first start, Eclipse will ask you for a workspace location. A workspace
 \begin{itemize}
 \item Go to menu: \texttt{File / New Java Project}.
 \item Enter new project name \texttt{HelloDuke}.
-\item Ensure that in project layout, the option to create separate folders for sources and classes is set. \includegraphics[width=1\linewidth]{../slides/EclipseProjectWizard1.png}\\
+\item Ensure that in project layout, the option to create separate folders for sources and classes is set. \includegraphics[width=.9\linewidth]{../slides/EclipseProjectWizard1.png}\\
 \item Continue with next.
 \item Review project layout and click finish. \includegraphics[width=1\linewidth]{../slides/EclipseProjectWizard2.png}
 \end{itemize}
 The new project will appear as follows in Eclipse Project Navigator.
-\includegraphics[width=1\linewidth]{../slides/EclipseProjectExplorerNewProject1.png}
+\includegraphics[width=.9\linewidth]{../slides/EclipseProjectExplorerNewProject1.png}
 \end{multicols}
 \subsection{Creating and running the first Java program}
 Selecting thr project root and opening the context menu, new objects can be created. So here a new class with the name \texttt{HelloDuke} can be created.\\
 \includegraphics[width=.3\linewidth]{../slides/ContextMenu_CreateClass.png} 
 \includegraphics[width=.5\linewidth]{../slides/EclipseProjectExplorerNewClass2.png}\\
 As soon as the class was created it can be edited in Eclipses Java code editor. The editor offers powerful code completion. As the main class skeleton was created automatically, it is sufficient to just type \texttt{main} and then press \texttt{CTRL}+\texttt{SPACE} to bring up code completion. Eclipse will offer automatic creation of a static main method, which is required to execute the program. Double click or just pressing \texttt{RETURN} or \texttt{ENTER} will insert the code.\\
-\includegraphics[width=.6\linewidth]{../slides/CodeCompletion_MainMethod.png}\\
+\includegraphics[width=.5\linewidth]{../slides/CodeCompletion_MainMethod.png}\\
 After completing the code as in the example, the program can be launched either using context menu on \texttt{HelloDuke.java} or via manual configuration. Here program execution via context menu is shown.\\
 \includegraphics[width=.7\linewidth]{../slides/CodeEditor_HelloDukeCode.png}\\
 One should note, that \texttt{HelloDuke.java} is located inside the \texttt{Default Package}. Packages are an essential concept and are covered in Lesson 2.\\
 \begin{multicols}{2}
-\includegraphics[width=1\linewidth]{../slides/EclipseProjectExplorerDefaultPackage.png}\\
+\includegraphics[width=.8\linewidth]{../slides/EclipseProjectExplorerDefaultPackage.png}\\
 \includegraphics[width=1\linewidth]{../slides/ContextMenu_Project_RunAs.png}\\
 \end{multicols}
 Select \texttt{HelloDuke.java} then open the context menu, go to \texttt{Run As} then select \texttt{1 Java Application}. The program will be executed and the console view will show the desired result.\\
