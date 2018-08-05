@@ -7,19 +7,22 @@ Even with a Java course fresh in mind, it can be tough to bootstrap a Java proje
 ## Lessons
 
 ### 1. Basics (*[lesson 1 handout](lesson-01-basics/doc/handout.pdf)*)
-    * How to create a Java project manually with just the JDK on board?
-    * How to setup a simple Eclipse project?
-    * Create the source, compile it and create a runnable JAR with most basic tooling - just the JDK.
+
+ * How to create a Java project manually with just the JDK on board?
+ * How to setup a simple Eclipse project?
+ * Create the source, compile it and create a runnable JAR with most basic tooling - just the JDK.
     
 ### 2. Bootstrap a project using Maven and Gradle
-    * What do Maven and Gradle do?
-    * Using Maven archetype to create a project.
-    * Use gradle init to create a project.
-    * Import the projects into Eclipse.
-    * Create a runnable JAR (build and run the project).
+ 
+ * What do Maven and Gradle do?
+ * Using Maven archetype to create a project.
+ * Use gradle init to create a project.
+ * Import the projects into Eclipse.
+ * Create a runnable JAR (build and run the project).
  
 ### 3. Add external dependencies.
-    * Create a runnable JAR with having the dependencies in a lib folder.
-    * Create a runnable JAR with all dependencies included.
+ 
+ * Create a runnable JAR with having the dependencies in a lib folder.
+ * Create a runnable JAR with all dependencies included.
 
 ### 4. Add test frameworks such as JUnit, TestNG.
