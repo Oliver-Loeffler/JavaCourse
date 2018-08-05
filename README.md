@@ -2,7 +2,12 @@
 
 ## Idea
 
-Even with a Java course fresh in mind, it can be tough to bootstrap a Java project from scratch and to get a working program from an IDE. This course is intended to show whats ongoing behind the IDE scenes and to help beginners with Java. Even with language details understood, the tooling is complex and there are many scenarios, options and conventions to go with. Due to some external constraints, this course in detail goes with Java 8 and Java 9. The favourized IDE is Eclipse and used build tools will be Gradle and Maven.
+Even with a Java course fresh in mind, it can be tough to bootstrap a Java project from scratch and to get a working program from an IDE. This course is intended to show whats ongoing behind the IDE scenes and to help beginners with Java. Even with language details understood, the tooling is complex and there are many scenarios, options and conventions to go with. Due to some external constraints, this course in detail goes with Java 8 and Java 9. The favourized IDE is Eclipse, Gradle and Maven will be used as build tools.
+
+## Requirements
+ 
+ * One should be familar how to use command lines like Windows CMD or Gnu Bash
+ * A JDK should be installed (Oracle JDK8 or 9)
 
 ## Lessons
 
